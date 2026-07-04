@@ -1,2 +1,3 @@
 print('Hello, Git!')
 print('Learning version control.')
+print('Third line added.')
