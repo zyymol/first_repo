@@ -6,7 +6,7 @@ print(df.describe())
 #缺失看Non-Null Count，范围看min和max
 #ex2
 df['temp'] = df.groupby('city')['temp'].transform(lambda x: x.fillna(x.median()))
-df['pm25']=df['pm25'].fillna(df['pm25'].mean())#inplace默认False只是副本需要赋值回去，True是直接在原表上改不赋值
+df['pm25']=df['pm25'].fillna(df['pm25'].median())#inplace默认False只是副本需要赋值回去，True是直接在原表上改不赋值
 df=df.dropna(subset=['sales'])
 df.info()
 
