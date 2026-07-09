@@ -30,7 +30,7 @@ plt.ylabel('pm25')
 plt.legend()
 plt.grid(True,alpha=0.5)
 plt.tight_layout()
-plt.savefig('temp_pm25_scatter.png', dpi=150, bbox_inches='tight', facecolor='none')
+plt.savefig('temp_pm25_scatter.png', dpi=150, bbox_inches='tight',facecolor='none')
 plt.show()
 
 #ex3
@@ -40,7 +40,7 @@ plt.barh(df3.index, df3.values,#h是横向的意思
 plt.xlabel('Sales Sum')
 plt.grid(True,alpha=0.3)
 plt.tight_layout()
-plt.savefig('city_sales_bar.png', dpi=150, bbox_inches='tight', facecolor='none')
+plt.savefig('city_sales_bar.png', dpi=150, bbox_inches='tight',facecolor='none')
 plt.show()
 
 #ex4
@@ -55,5 +55,5 @@ ax2.plot(dmean.index,dmean['pm25'], color='r', linewidth=2, label='pm25')
 ax2.set_ylabel('pm25')
 ax2.legend()
 plt.tight_layout()
-plt.savefig('temp_mean & pm25_mean.png', dpi=150, bbox_inches='tight', facecolor='none')
+plt.savefig('temp_mean & pm25_mean.png', dpi=150, bbox_inches='tight',facecolor='none')
 plt.show()

@@ -20,7 +20,7 @@ axes[1, 1].pie(promo_counts.values, labels=['No Promo','Promo'],autopct='%1.1f%%
 axes[1, 1].set_title('Promo Rate')
 fig.suptitle('fig16-1')
 fig.tight_layout()
-fig.savefig('16-1.png', dpi=150, bbox_inches='tight', facecolor='none')
+fig.savefig('16-1.png', dpi=150, bbox_inches='tight')
 plt.show()
 
 #ex2
@@ -39,7 +39,7 @@ for i in range(3):
 
 fig.suptitle('Temp by City')
 fig.tight_layout()
-fig.savefig('16-2.png', dpi=150, bbox_inches='tight', facecolor='none')
+fig.savefig('16-2.png', dpi=150, bbox_inches='tight')
 plt.show()
 
 #ex3
@@ -58,7 +58,7 @@ ax2.set_ylabel('PM2.5',color='#E24B4A')
 ax2.legend(loc='upper right')
 fig.suptitle('Daily Temp & PM2.5')
 fig.tight_layout()
-fig.savefig('16-3.png', dpi=150, bbox_inches='tight', facecolor='none')
+fig.savefig('16-3.png', dpi=150, bbox_inches='tight')
 plt.show()
 
 #ex4
@@ -93,5 +93,5 @@ ax3.set_xlabel('sales_sum')
 ax3.set_title('Sub3: City sales sum')
 
 fig.tight_layout()
-fig.savefig('16-4.png', dpi=150, bbox_inches='tight', facecolor='none')
+fig.savefig('16-4.png', dpi=150, bbox_inches='tight')
 plt.show()
