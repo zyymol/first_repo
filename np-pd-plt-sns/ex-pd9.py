@@ -14,7 +14,13 @@ df['sales_ma7'] = df['sales'].rolling(7).mean()
 print(df[['sales','sales_ma7']].tail(10))
 
 #ex3
-df['sales_z']=(df['sales']-df['sales'].mean())/df['sales'].std()
-df['pm25_z']=(df['pm25']-df['pm25'].mean())/df['pm25'].std()
-df['score'] = df.apply(lambda row: row['sales_z'] + row['promo'] * 0.3 - row['pm25_z'], axis=1)
-print(df.head())
+def adjust_sales(row):
+    if row['city'] == 'Beijing':
+        return row['sales'] * 0.9
+    elif row['promo']:
+        return row['sales'] * 1.2
+    else:
+        return row['sales']
+
+df['adjusted'] = df.apply(adjust_sales, axis=1)
+print(df[['city','promo','sales','adjusted']].head())
