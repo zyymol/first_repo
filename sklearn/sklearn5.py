@@ -32,7 +32,7 @@ fpr, tpr, _ = roc_curve(y_test, y_prob)
 auc = roc_auc_score(y_test, y_prob)
 
 plt.figure(figsize=(6, 5))
-plt.plot(fpr, tpr, lw=2, color='1', label=f'KNN(k=5) AUC={auc:.3f}')
+plt.plot(fpr, tpr, lw=2, color='r', label=f'KNN(k=5) AUC={auc:.3f}')
 plt.plot([0, 1], [0, 1], '--', lw=2, color='grey',label='Random guess AUC=0.5')
 plt.xlabel('False Positive Rate')
 plt.ylabel('True Positive Rate')
