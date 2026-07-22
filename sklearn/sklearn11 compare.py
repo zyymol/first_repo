@@ -33,11 +33,11 @@ import pandas as pd
 df = pd.DataFrame(res).sort_values('F1', ascending=False)
 print(df.round(4))
 import matplotlib.pyplot as plt
-plt.figure(figsize=(10, 5))
-bars = plt.bar(df['Model'].tolist(),df['F1'].tolist(),color=['red','orange','yellow','green','blue','grey'])
+plt.figure(figsize=(10, 6))
+bars = plt.bar(df['Model'].tolist(),df['F1'].tolist(),yerr=df['F1_std'].tolist(),capsize=5,color=['red','orange','yellow','green','blue','grey'])
 for bar, val in zip(bars, df['F1'].tolist()):
-    plt.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.002,
-             f'{val:.3f}', ha='center', fontsize=11)
+    plt.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.015,
+             f'{val:.3f}', ha='center', fontsize=10)
 plt.ylabel('F1')
 plt.tight_layout()
 plt.savefig('all_model_F1.png', dpi=150, bbox_inches='tight', facecolor='none')
